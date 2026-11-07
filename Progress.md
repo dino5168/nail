@@ -21,6 +21,8 @@
 - GitHub Actions：lint → typecheck → build → 部署 GitHub Pages。
 - 本機驗證：lint、typecheck、build 通過；以 `/nail` basePath 的靜態輸出測試各頁 200，桌機與 390px 手機版截圖檢查版面。
 
+- 已推送到 `main`（commit `2471bf5`）。CI run 42318298935：build job（lint／typecheck／build）✅；deploy job ❌，原因是 repo 尚未啟用 GitHub Pages。
+
 **待辦／下一步**
 - [ ] 使用者到 GitHub repo → Settings → Pages → Source 選「GitHub Actions」（只需一次）
 - [ ] 提供真實店名、地址、電話、營業時間、價目、LINE/Zalo 連結
