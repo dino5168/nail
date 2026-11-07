@@ -6,7 +6,8 @@
 
 - 階段 1（骨架與 CI）：✅ 完成
 - 階段 2（頁面內容）：✅ 完成（示範文案＋佔位圖）
-- 階段 3（精修）：⏳ 等待使用者提供真實資料與回饋
+- 階段 3-A（動畫、SEO、圖示、效能）：✅ 完成
+- 階段 3-B（替換真實資料與照片）：⏳ 等待使用者提供
 
 ## 紀錄
 
@@ -26,8 +27,18 @@
 - 使用者已將 Pages Source 設為 GitHub Actions；CI run 42319628526 全部成功，網站上線：https://dino5168.github.io/nail/（各頁 200、未知路徑 404）。
 - 修正首頁 Hero 粉色光暈蓋住標題文字的問題。
 
+**階段 3-A 精修**
+- 捲動淡入動畫（`RevealObserver` + `data-reveal`）：首屏內容不閃爍、JS 停用時照常顯示、支援減少動態。
+- 自訂網站圖示 `icon.svg`。
+- SEO：`sitemap.xml`（含 hreflang）、每語系 OG 分享圖 `/<lang>/og.png`、Twitter card、JSON-LD `NailSalon`。
+- 效能：中文標題字型改為建置時子集化（131 KB），CSS 400+ KB → 42 KB。
+- 無障礙：LINE 按鈕對比、Logo 連結名稱。
+- Lighthouse（線上、手機）：zh-tw 96／100／100／100，vi 97／100／100／100。
+- 發現：Windows 本機建置時 Next 16.4 的 `__PAGE__` 預取檔路徑有 bug；CI 在 Linux 建置正常（線上確認 200）。
+
 **待辦／下一步**
 - [x] 使用者到 GitHub repo → Settings → Pages → Source 選「GitHub Actions」（只需一次）
 - [ ] 提供真實店名、地址、電話、營業時間、價目、LINE/Zalo 連結
 - [ ] 提供店內與作品照片，替換佔位圖
-- [ ] 階段 3：捲動淡入動畫、sitemap／OG 圖、Lighthouse 檢查
+- [x] 階段 3-A：捲動淡入動畫、sitemap／OG 圖、Lighthouse 檢查
+- [ ] 上線正式網域後，到 Google Search Console 提交 `sitemap.xml`
