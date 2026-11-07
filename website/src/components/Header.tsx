@@ -36,8 +36,12 @@ export function Header({
   // 開啟手機選單時鎖住背景捲動
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
+    // 按 Esc 關閉選單
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    if (open) window.addEventListener("keydown", onKey);
     return () => {
       document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
     };
   }, [open]);
 
@@ -66,6 +70,7 @@ export function Header({
   );
 
   return (
+    <>
     <header className="sticky top-0 z-40 border-b border-blush-200 bg-white/95 backdrop-blur">
       <div className="container-page flex h-[72px] items-center justify-between gap-4">
         <Link href={href(locale)} onClick={() => setOpen(false)}>
@@ -121,12 +126,17 @@ export function Header({
           </button>
         </div>
       </div>
+    </header>
 
-      {/* 手機選單 */}
+      {/*
+        手機選單：必須放在 <header> 外面。header 有 backdrop-blur（backdrop-filter），
+        會成為 position: fixed 子元素的定位基準，放在裡面時選單高度會變成 0（點了沒反應）。
+        z-index 介於 header（40）與浮動聊天按鈕（30）之間，蓋住聊天按鈕。
+      */}
       <div
         id="mobile-menu"
         hidden={!open}
-        className="fixed inset-x-0 bottom-0 top-[72px] overflow-y-auto bg-blush-100 lg:hidden"
+        className="fixed inset-x-0 bottom-0 top-[72px] z-[35] overflow-y-auto bg-blush-100 lg:hidden"
       >
         <nav className="container-page py-8" aria-label="Mobile">
           <ul className="space-y-1">
@@ -154,6 +164,6 @@ export function Header({
           </div>
         </nav>
       </div>
-    </header>
+    </>
   );
 }

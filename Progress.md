@@ -45,6 +45,10 @@
 - 店名改為「嬌仙美甲」，外文名 Kieu Tien Nail（越南語 Kiều Tiên Nail）；地址改為新北市三峽區忠孝街 25 號。
 - 移除不適用的捷運交通說明與舊台北座標；分享圖、子集字型、JSON-LD 隨建置更新。
 
+**Plans/3 手機漢堡選單沒作用**（詳見 `Plans/3-手機實作.md`）
+- 原因：選單寫在有 `backdrop-filter` 的 header 裡，fixed 定位以 header 為基準，高度變成 0。
+- 修正：選單移到 header 外，`z-index` 蓋住聊天按鈕，加上 Esc 關閉；用無頭 Edge 實際點擊驗證（高度 0 → 772px）。
+
 **待辦／下一步**
 - [x] 使用者到 GitHub repo → Settings → Pages → Source 選「GitHub Actions」（只需一次）
 - [x] 店名、地址

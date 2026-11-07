@@ -44,6 +44,7 @@ web-nail/                    ← git repo 根目錄
   - 中文內文使用系統字型（不下載）。**不要**改回 `next/font/google` 的 Noto TC，會產生 400 KB 以上會擋住渲染的 CSS。
 - **捲動淡入**：元素加上 `data-reveal`（可帶 `"1"`～`"3"` 表示延遲），由 `RevealObserver` 處理。有 hover 位移效果的元素，請把 `data-reveal` 加在外層。
 - **SEO**：`app/sitemap.ts`、`[lang]/og.png/route.tsx`（分享圖，建置時用 Google Fonts 子集字型產生）、`components/JsonLd.tsx`（schema.org NailSalon，資料來自 `config/site.ts`）、`lib/metadata.ts` 的 `pageMetadata()`（canonical、hreflang、OG、Twitter）。
+- **header 有 `backdrop-blur`**：任何 `position: fixed` 的浮層（選單、彈窗）都**不能**放在 `<header>` 裡面，否則會以 header 為定位基準，高度變成 0（見 `Plans/3-手機實作.md`）。
 - 已知問題：在 **Windows** 本機建置時，Next 16.4 會把 `__PAGE__` 預取檔輸出成子目錄（路徑分隔符的 bug），本機靜態測試會看到幾個 404。CI 在 Linux 建置，不受影響。
 
 ## 常用指令（PowerShell，在 `website/` 下）
