@@ -5,7 +5,7 @@
 
 ## 目前狀態（2026-11-07 暫停）
 
-- 線上網址：https://dino5168.github.io/nail/ 　最新 commit：`fe2591a`（CI & Deploy ✅）
+- 線上網址：https://dino5168.github.io/nail/ 　最新 commit：`148e333`（CI & Deploy ✅）
 - 階段 1（骨架與 CI）：✅ 完成
 - 階段 2（頁面內容）：✅ 完成（示範文案＋佔位圖）
 - 階段 3-A（動畫、SEO、圖示、效能）：✅ 完成，Lighthouse 手機 96～97／100／100／100
@@ -77,6 +77,7 @@
 - g01～g04（手繪造型、單色凝膠、法式、延甲）改用 Pexels 照片，裁成 640×640 WebP（15～36 KB），存在 `public/images/gallery/`。
 - `gallery.ts` 新增 `credit` 欄位記錄攝影師與來源；圖庫照片不是本店作品，所以仍顯示「示意圖」。
 - 本機桌機與 390px 手機截圖確認版面正常。
+- commit `148e333`，CI run 42362142637 ✅；線上 4 張照片都回傳 200 `image/webp`。
 
 **待辦／下一步**
 - [x] 使用者到 GitHub repo → Settings → Pages → Source 選「GitHub Actions」（只需一次）
