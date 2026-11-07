@@ -12,6 +12,7 @@
 - Plans/2 店名與地址：✅ 嬌仙美甲 Kieu Tien Nail、新北市三峽區忠孝街 25 號
 - Plans/3 手機漢堡選單：✅ 已修正並在線上驗證
 - Plans/4 首頁 Hero 照片：✅ 換成 `home01.png`（WebP 23 KB）
+- Plans/5 作品精選照片：✅ g01～g04 改用 Pexels 圖庫照片（仍標示「示意圖」）
 - 階段 3-B（其餘真實資料與照片）：⏳ 等待使用者提供
 
 ### 下次從這裡開始
@@ -72,10 +73,15 @@
 - 本機桌機與 390px 手機截圖確認版面正常。
 - commit `fe2591a`，CI run 42361058059 ✅；線上 `/nail/images/home-hero.webp` 回傳 200 `image/webp`，兩語系首頁都已改用新照片。
 
+**Plans/5 作品精選換成 Pexels 照片**（詳見 `Plans/5-換首頁照片02實作.md`）
+- g01～g04（手繪造型、單色凝膠、法式、延甲）改用 Pexels 照片，裁成 640×640 WebP（15～36 KB），存在 `public/images/gallery/`。
+- `gallery.ts` 新增 `credit` 欄位記錄攝影師與來源；圖庫照片不是本店作品，所以仍顯示「示意圖」。
+- 本機桌機與 390px 手機截圖確認版面正常。
+
 **待辦／下一步**
 - [x] 使用者到 GitHub repo → Settings → Pages → Source 選「GitHub Actions」（只需一次）
 - [x] 店名、地址
 - [ ] 提供電話、營業時間、價目、LINE/Zalo 連結、交通說明、店家經緯度
-- [ ] 提供店內與作品照片，替換佔位圖
+- [ ] 提供店內與作品照片，替換佔位圖與 Pexels 示意照片（g01～g04）
 - [x] 階段 3-A：捲動淡入動畫、sitemap／OG 圖、Lighthouse 檢查
 - [ ] 上線正式網域後，到 Google Search Console 提交 `sitemap.xml`

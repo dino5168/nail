@@ -24,6 +24,9 @@ export function GalleryTile({
         <img
           src={asset(item.image)}
           alt={label}
+          title={item.credit ? `Photo: ${item.credit.photographer} / Pexels` : undefined}
+          width={640}
+          height={640}
           loading="lazy"
           className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
@@ -38,7 +41,7 @@ export function GalleryTile({
       )}
       <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-plum-900/70 to-transparent px-4 pb-3 pt-10 text-sm text-white">
         <span>{label}</span>
-        {!item.image && <span className="text-[0.65rem] uppercase tracking-widest text-white/70">{note}</span>}
+        {(!item.image || item.credit) && <span className="text-[0.65rem] uppercase tracking-widest text-white/70">{note}</span>}
       </figcaption>
     </figure>
   );
