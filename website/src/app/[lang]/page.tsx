@@ -3,7 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { GalleryTile } from "@/components/GalleryGrid";
 import { ArrowIcon } from "@/components/icons";
-import { HeroNails, LeafDecor } from "@/components/illustrations";
+import { LeafDecor } from "@/components/illustrations";
+import { asset } from "@/config/site";
 import { CtaBanner, SectionHeading, ServiceRows, WhyChooseUs } from "@/components/sections";
 import { gallery } from "@/data/gallery";
 import { services } from "@/data/services";
@@ -44,7 +45,16 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
             </Link>
           </div>
           <div className="relative order-1 -mx-5 lg:order-2 lg:mx-0">
-            <HeroNails className="relative mx-auto h-auto w-full max-w-[560px] [mask-image:linear-gradient(to_bottom,black_70%,transparent)]" />
+            {/* 原圖 417×396，最大寬度不超過原尺寸避免放大糊掉 */}
+            {/* eslint-disable-next-line @next/next/no-img-element -- 靜態輸出、images.unoptimized */}
+            <img
+              src={asset("/images/home-hero.webp")}
+              alt={hero.imageAlt}
+              width={417}
+              height={396}
+              fetchPriority="high"
+              className="relative mx-auto h-auto w-full max-w-[417px] rounded-b-[2rem] shadow-xl shadow-plum-700/10 lg:rounded-[2rem]"
+            />
           </div>
         </div>
       </section>

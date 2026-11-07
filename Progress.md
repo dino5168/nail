@@ -11,6 +11,7 @@
 - 階段 3-A（動畫、SEO、圖示、效能）：✅ 完成，Lighthouse 手機 96～97／100／100／100
 - Plans/2 店名與地址：✅ 嬌仙美甲 Kieu Tien Nail、新北市三峽區忠孝街 25 號
 - Plans/3 手機漢堡選單：✅ 已修正並在線上驗證
+- Plans/4 首頁 Hero 照片：✅ 換成 `home01.png`（WebP 23 KB）
 - 階段 3-B（其餘真實資料與照片）：⏳ 等待使用者提供
 
 ### 下次從這裡開始
@@ -19,7 +20,7 @@
    - 店家設定 `website/src/config/site.ts`
    - 兩語系字典 `website/src/i18n/dictionaries/zh-tw.ts`、`vi.ts`
    - 服務價目 `website/src/data/services.ts`
-   - 作品集 `website/src/data/gallery.ts`，照片放 `website/public/images/`
+   - 作品集 `website/src/data/gallery.ts`，照片放 `website/public/images/`（做法參考 `Plans/4-換首頁照片實作.md`：sharp 轉 WebP、`asset()`）
 2. 仍是示範值、上線前必須替換：電話 `02-1234-5678`、Email、LINE／Zalo 帳號、Instagram／Facebook 連結、營業時間、價目、團隊成員（Mia／Linh／Yuki）、創立年份與品牌故事、FAQ 內容。
 3. 驗證工具：
    - 手機漢堡選單：`node website/scripts/menu-test.mjs <網址> <輸出.png>`（無頭 Edge + CDP，模擬 390×844 視窗點擊並截圖）
@@ -64,6 +65,11 @@
 **Plans/3 手機漢堡選單沒作用**（詳見 `Plans/3-手機實作.md`）
 - 原因：選單寫在有 `backdrop-filter` 的 header 裡，fixed 定位以 header 為基準，高度變成 0。
 - 修正：選單移到 header 外，`z-index` 蓋住聊天按鈕，加上 Esc 關閉；用無頭 Edge 實際點擊驗證（高度 0 → 772px）。
+
+**Plans/4 換首頁照片**（詳見 `Plans/4-換首頁照片實作.md`）
+- 首頁 Hero 的 SVG 插畫換成真實照片：`home01.png`（259 KB）轉成 WebP 存為 `public/images/home-hero.webp`（23 KB）。
+- 設定寬高、`fetchPriority="high"`、雙語替代文字；最大寬度 417px，避免放大糊掉。刪除不再使用的 `HeroNails`。
+- 本機桌機與 390px 手機截圖確認版面正常。
 
 **待辦／下一步**
 - [x] 使用者到 GitHub repo → Settings → Pages → Source 選「GitHub Actions」（只需一次）

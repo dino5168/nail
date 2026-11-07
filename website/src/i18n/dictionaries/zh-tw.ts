@@ -40,6 +40,7 @@ const zhTw = {
       titleLines: ["沉浸於", "極致奢華的", "美甲與手足保養"],
       subtitle: "@ 嬌仙美甲 Kieu Tien Nail",
       cta: "查看服務",
+      imageAlt: "深藍色長方形美甲，搭配白色手繪花朵與水鑽線條",
     },
     why: {
       title: "為什麼選擇我們？",

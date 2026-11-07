@@ -85,36 +85,6 @@ function Nail({
   );
 }
 
-/** 首頁 Hero：從下方伸出的五指與指甲彩繪 */
-export function HeroNails({ className }: { className?: string }) {
-  const fingers = [
-    { angle: -36, len: 560, style: "glitter" as const },
-    { angle: -17, len: 640, style: "floral" as const },
-    { angle: 0, len: 680, style: "glitter" as const },
-    { angle: 17, len: 640, style: "floral" as const },
-    { angle: 34, len: 560, style: "glitter" as const },
-  ];
-  return (
-    <svg viewBox="0 0 640 640" className={className} role="img" aria-hidden="true">
-      <defs>
-        <linearGradient id="skin" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0" stopColor="#e9b79f" />
-          <stop offset="0.5" stopColor="#f6d3c2" />
-          <stop offset="1" stopColor="#e5ad95" />
-        </linearGradient>
-      </defs>
-      {fingers.map((f, i) => (
-        <g key={i} transform={`translate(320 760) rotate(${f.angle}) translate(0 ${-f.len})`}>
-          <rect x={-46} y={0} width={92} height={f.len} rx={46} fill="url(#skin)" />
-          <g transform="translate(0 66) scale(0.95)">
-            <Nail id={`hero-${i}`} style={f.style} base="#8e2a6e" accent="#c25a9a" seed={i + 1} />
-          </g>
-        </g>
-      ))}
-    </svg>
-  );
-}
-
 /** 作品集／服務卡片用的佔位圖 */
 export function NailTile({
   id,

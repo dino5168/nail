@@ -37,7 +37,7 @@ web-nail/                    ← git repo 根目錄
   - 站內連結一律用 `href(locale, page)`。
   - 語系切換使用 `<a>` 整頁載入（確保 `<html lang>` 更新）。
 - `[lang]/layout.tsx` 設定 `dynamicParams = false` 與 `generateStaticParams`，新增頁面時沿用相同的 `hasLocale` + `notFound()` 寫法。
-- 圖片目前是 SVG 佔位圖（`components/illustrations.tsx`）。真實照片放 `website/public/images/`，並在 `data/gallery.ts` 的 `image` 欄位填入路徑。
+- 圖片：首頁 Hero 已是真實照片（`public/images/home-hero.webp`，由 `Plans/Images/home01.png` 轉成 WebP）；其餘仍是 SVG 佔位圖（`components/illustrations.tsx`）。真實照片放 `website/public/images/`，建議先用 sharp 轉 WebP，`<img src>` 要經過 `asset()`；作品集在 `data/gallery.ts` 的 `image` 欄位填入路徑。
 - **字型**：
   - 拉丁／越南文：Cormorant Garamond（標題）＋ Be Vietnam Pro（內文），由 `next/font/google` 載入。
   - 中文標題：`scripts/subset-font.mjs` 在 `predev`／`prebuild` 自動掃描 `src/` 的中文字，產生只含這些字的 Noto Serif TC 子集（`src/fonts/`，約 130 KB，**需 commit**）。修改中文文案後跑一次 dev 或 build，再把更新後的字型一起 commit。

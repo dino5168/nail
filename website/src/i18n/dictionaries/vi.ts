@@ -42,6 +42,7 @@ const vi: Dictionary = {
       titleLines: ["Tận hưởng", "dịch vụ nail", "và chăm sóc cao cấp"],
       subtitle: "@ Kiều Tiên Nail",
       cta: "Xem dịch vụ",
+      imageAlt: "Bộ móng dài màu xanh navy với hoa trắng vẽ tay và đường đá lấp lánh",
     },
     why: {
       title: "Vì sao chọn chúng tôi?",
