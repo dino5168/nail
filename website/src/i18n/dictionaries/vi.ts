@@ -88,8 +88,9 @@ const vi: Dictionary = {
     title: "Giới thiệu",
     lead: "Mỗi lần làm nail là một lần chiều chuộng bản thân.",
     storyTitle: "Câu chuyện của chúng tôi",
+    storyImageAlt: "Thợ nail đang chăm sóc móng tay cho khách",
     story: [
-      "Kiều Tiên Nail được thành lập tại Tam Hiệp, Tân Bắc năm 2018. Người sáng lập Mia có hơn mười năm kinh nghiệm và tin rằng làm nail không chỉ là trang trí, mà còn là cách chăm sóc bản thân.",
+      "Kiều Tiên Nail được thành lập tại Tam Hiệp, Tân Bắc năm 2018. Người sáng lập Kiều Tiên có hơn mười năm kinh nghiệm và tin rằng làm nail không chỉ là trang trí, mà còn là cách chăm sóc bản thân.",
       "Đội ngũ của chúng tôi đến từ Đài Loan và Việt Nam, kết hợp nét vẽ tinh tế kiểu Nhật với phong cách lộng lẫy đang thịnh hành tại Việt Nam để tạo nên những thiết kế độc đáo.",
       "Từ khử trùng dụng cụ, chọn sản phẩm đến quy trình phục vụ, chúng tôi chăm chút từng chi tiết để bạn yên tâm và thư giãn.",
     ],
@@ -101,7 +102,7 @@ const vi: Dictionary = {
     ],
     teamTitle: "Đội ngũ",
     team: [
-      { name: "Mia", role: "Người sáng lập / Thợ chính", bio: "Hơn 10 năm kinh nghiệm, giỏi vẽ hoa và hiệu ứng ombre." },
+      { name: "Kiều Tiên", role: "Người sáng lập / Thợ chính", bio: "Hơn 10 năm kinh nghiệm, giỏi vẽ hoa và hiệu ứng ombre." },
       { name: "Linh", role: "Thợ nail lâu năm", bio: "Đến từ TP. Hồ Chí Minh, chuyên nối móng bột và đính đá 3D." },
       { name: "Yuki", role: "Thợ nail", bio: "Yêu phong cách tối giản kiểu Nhật, giỏi French và mắt mèo." },
     ],

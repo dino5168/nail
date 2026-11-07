@@ -131,3 +131,15 @@ export function LeafDecor({ className }: { className?: string }) {
     </svg>
   );
 }
+
+/** 團隊成員用的人物圖示（示意，換成本人照片前使用） */
+export function PersonAvatar({ colors, className }: { colors: [string, string]; className?: string }) {
+  const [fg, bg] = colors;
+  return (
+    <svg viewBox="0 0 120 120" className={className} role="img" aria-hidden="true">
+      <rect width="120" height="120" fill={bg} />
+      <circle cx="60" cy="47" r="21" fill={fg} />
+      <path d="M18 120c0-25 19-42 42-42s42 17 42 42z" fill={fg} />
+    </svg>
+  );
+}
