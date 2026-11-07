@@ -1,13 +1,13 @@
 // 繁體中文字典。此檔的結構即為所有語系必須遵守的 Dictionary 型別。
 const zhTw = {
   meta: {
-    siteName: "花漾美甲 Bloom Nail Studio",
+    siteName: "嬌仙美甲 Kieu Tien Nail",
     description:
-      "花漾美甲 Bloom Nail Studio — 位於台北的精緻美甲沙龍，提供凝膠指甲、手繪造型、延甲、足部保養與石蠟護理。",
+      "嬌仙美甲 — 位於新北市三峽的精緻美甲沙龍，提供凝膠指甲、手繪造型、延甲、足部保養與石蠟護理。",
   },
   brand: {
-    name: "花漾美甲",
-    sub: "Bloom Nail Studio",
+    name: "嬌仙美甲",
+    sub: "Kieu Tien Nail",
   },
   nav: {
     home: "首頁",
@@ -38,7 +38,7 @@ const zhTw = {
   home: {
     hero: {
       titleLines: ["沉浸於", "極致奢華的", "美甲與手足保養"],
-      subtitle: "@ 花漾美甲 Bloom Nail Studio",
+      subtitle: "@ 嬌仙美甲 Kieu Tien Nail",
       cta: "查看服務",
     },
     why: {
@@ -63,7 +63,7 @@ const zhTw = {
       ],
     },
     intro: {
-      eyebrow: "花漾美甲 Bloom Nail Studio",
+      eyebrow: "嬌仙美甲 Kieu Tien Nail",
       strong: "專注手足美甲與保養的精品沙龍，以奢華療程呵護每一雙手，",
       faded: "提供石蠟與精油護理、凝膠與水晶延甲、加厚補強，以及各式手繪凝膠造型。",
     },
@@ -86,7 +86,7 @@ const zhTw = {
     lead: "讓每一次美甲，都是一段寵愛自己的時光。",
     storyTitle: "我們的故事",
     story: [
-      "花漾美甲於 2018 年在台北成立，創辦人 Mia 擁有十年以上的美甲經驗。她相信美甲不只是裝飾，更是一種照顧自己的方式。",
+      "嬌仙美甲於 2018 年在新北三峽成立，創辦人 Mia 擁有十年以上的美甲經驗。她相信美甲不只是裝飾，更是一種照顧自己的方式。",
       "我們的團隊來自台灣與越南，擅長日系細緻手繪與越南流行的華麗造型，結合兩地美學，為客人打造獨一無二的設計。",
       "從工具消毒、產品選擇到服務流程，我們堅持每一個細節，只為讓您安心、放鬆地享受美麗。",
     ],
@@ -150,8 +150,7 @@ const zhTw = {
     title: "聯絡我們",
     lead: "歡迎透過 LINE、電話預約或諮詢，我們會盡快回覆您。",
     addressLabel: "地址",
-    address: "台北市大安區忠孝東路四段 100 號 2 樓",
-    transit: "捷運忠孝復興站 4 號出口，步行約 3 分鐘",
+    address: "新北市三峽區忠孝街 25 號",
     phoneLabel: "電話",
     emailLabel: "Email",
     hoursLabel: "營業時間",

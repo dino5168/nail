@@ -7,7 +7,8 @@
 - 階段 1（骨架與 CI）：✅ 完成
 - 階段 2（頁面內容）：✅ 完成（示範文案＋佔位圖）
 - 階段 3-A（動畫、SEO、圖示、效能）：✅ 完成
-- 階段 3-B（替換真實資料與照片）：⏳ 等待使用者提供
+- 店名與地址（Plans/2）：✅ 嬌仙美甲 Kieu Tien Nail、新北市三峽區忠孝街 25 號
+- 階段 3-B（其餘真實資料與照片）：⏳ 等待使用者提供
 
 ## 紀錄
 
@@ -40,9 +41,14 @@
 - 原因：Pages Source 實際為「Deploy from a branch」，GitHub 內建的 `pages build and deployment` 與我們的 CI 同時部署；`68b6efc` 時內建部署較晚完成，把網站蓋成 repo 原始檔。
 - 處理：使用者將 Source 改為 GitHub Actions，重新部署並確認；`CLAUDE.md` 已加入檢查方式。
 
+**Plans/2 網站名稱修改**（詳見 `Plans/2-網站名稱修改實作.md`）
+- 店名改為「嬌仙美甲」，外文名 Kieu Tien Nail（越南語 Kiều Tiên Nail）；地址改為新北市三峽區忠孝街 25 號。
+- 移除不適用的捷運交通說明與舊台北座標；分享圖、子集字型、JSON-LD 隨建置更新。
+
 **待辦／下一步**
 - [x] 使用者到 GitHub repo → Settings → Pages → Source 選「GitHub Actions」（只需一次）
-- [ ] 提供真實店名、地址、電話、營業時間、價目、LINE/Zalo 連結
+- [x] 店名、地址
+- [ ] 提供電話、營業時間、價目、LINE/Zalo 連結、交通說明、店家經緯度
 - [ ] 提供店內與作品照片，替換佔位圖
 - [x] 階段 3-A：捲動淡入動畫、sitemap／OG 圖、Lighthouse 檢查
 - [ ] 上線正式網域後，到 Google Search Console 提交 `sitemap.xml`

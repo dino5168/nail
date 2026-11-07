@@ -37,7 +37,6 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
             <div>
               <h2 className="text-xs uppercase tracking-[0.25em] text-muted">{c.addressLabel}</h2>
               <p className="mt-2 text-lg">{c.address}</p>
-              <p className="mt-1 text-sm text-muted">{c.transit}</p>
               <a href={site.mapUrl} target="_blank" rel="noopener noreferrer"
                 className="mt-3 inline-block text-sm text-plum-700 underline underline-offset-4 hover:text-plum-900">
                 {c.mapButton}

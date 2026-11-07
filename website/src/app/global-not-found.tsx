@@ -3,7 +3,7 @@ import { fontVariables } from "@/lib/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "404 — 花漾美甲 Bloom Nail Studio",
+  title: "404 — 嬌仙美甲 Kieu Tien Nail",
 };
 
 const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";

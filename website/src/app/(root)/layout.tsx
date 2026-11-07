@@ -3,7 +3,7 @@ import { fontVariables } from "@/lib/fonts";
 import "../globals.css";
 
 export const metadata: Metadata = {
-  title: "花漾美甲 Bloom Nail Studio",
+  title: "嬌仙美甲 Kieu Tien Nail",
   robots: { index: false },
 };
 

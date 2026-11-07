@@ -7,7 +7,7 @@ export default function RootPage() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-8 px-6 text-center">
       <LocaleRedirect />
-      <p className="heading-display text-3xl">花漾美甲 · Bloom Nail Studio</p>
+      <p className="heading-display text-3xl">嬌仙美甲 · Kieu Tien Nail</p>
       <div className="flex gap-4">
         <Link href={href("zh-tw")} className="btn-primary">
           繁體中文

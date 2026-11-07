@@ -1,4 +1,4 @@
-# 花漾美甲 Bloom Nail Studio — 網站
+# 嬌仙美甲 Kieu Tien Nail — 網站
 
 Next.js 16 靜態網站，支援繁體中文（`/zh-tw/`）與越南語（`/vi/`）。
 

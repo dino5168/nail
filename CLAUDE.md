@@ -1,6 +1,6 @@
 # CLAUDE.md — 美甲網站（web-nail）
 
-靜態美甲網站「花漾美甲 Bloom Nail Studio」（暫定品牌），支援繁體中文與越南語。
+靜態美甲網站「嬌仙美甲 Kieu Tien Nail」（越南語：Kiều Tiên Nail），店址：新北市三峽區忠孝街25號。支援繁體中文與越南語。
 
 - Repo：https://github.com/dino5168/nail
 - 線上網址：https://dino5168.github.io/nail/

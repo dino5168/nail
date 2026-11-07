@@ -18,7 +18,6 @@ export function JsonLd({ locale, dict }: { locale: Locale; dict: Dictionary }) {
     priceRange: site.priceRange,
     inLanguage: htmlLang[locale],
     address: { "@type": "PostalAddress", ...site.address },
-    geo: { "@type": "GeoCoordinates", ...site.geo },
     openingHoursSpecification: site.openingHours.map((h) => ({
       "@type": "OpeningHoursSpecification",
       dayOfWeek: h.days,

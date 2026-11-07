@@ -3,13 +3,13 @@ import type { Dictionary } from "./zh-tw";
 // Tiếng Việt. Phải có cấu trúc giống hệt zh-tw.ts（漏翻譯會在編譯時報錯）。
 const vi: Dictionary = {
   meta: {
-    siteName: "Bloom Nail Studio",
+    siteName: "Kiều Tiên Nail",
     description:
-      "Bloom Nail Studio — tiệm nail cao cấp tại Đài Bắc: sơn gel, vẽ móng nghệ thuật, nối móng, chăm sóc chân và dưỡng tay bằng sáp paraffin.",
+      "Kiều Tiên Nail — tiệm nail cao cấp tại Tam Hiệp, Tân Bắc: sơn gel, vẽ móng nghệ thuật, nối móng, chăm sóc chân và dưỡng tay bằng sáp paraffin.",
   },
   brand: {
-    name: "Bloom Nail",
-    sub: "Studio",
+    name: "Kiều Tiên",
+    sub: "Nail",
   },
   nav: {
     home: "Trang chủ",
@@ -40,7 +40,7 @@ const vi: Dictionary = {
   home: {
     hero: {
       titleLines: ["Tận hưởng", "dịch vụ nail", "và chăm sóc cao cấp"],
-      subtitle: "@ Bloom Nail Studio",
+      subtitle: "@ Kiều Tiên Nail",
       cta: "Xem dịch vụ",
     },
     why: {
@@ -65,7 +65,7 @@ const vi: Dictionary = {
       ],
     },
     intro: {
-      eyebrow: "Bloom Nail Studio",
+      eyebrow: "Kiều Tiên Nail",
       strong: "Tiệm nail chuyên làm móng tay, móng chân với các liệu trình chăm sóc cao cấp, ",
       faded: "bao gồm dưỡng sáp paraffin và tinh dầu, nối móng gel và bột, đắp móng, cùng nhiều mẫu vẽ gel nghệ thuật.",
     },
@@ -88,7 +88,7 @@ const vi: Dictionary = {
     lead: "Mỗi lần làm nail là một lần chiều chuộng bản thân.",
     storyTitle: "Câu chuyện của chúng tôi",
     story: [
-      "Bloom Nail Studio được thành lập tại Đài Bắc năm 2018. Người sáng lập Mia có hơn mười năm kinh nghiệm và tin rằng làm nail không chỉ là trang trí, mà còn là cách chăm sóc bản thân.",
+      "Kiều Tiên Nail được thành lập tại Tam Hiệp, Tân Bắc năm 2018. Người sáng lập Mia có hơn mười năm kinh nghiệm và tin rằng làm nail không chỉ là trang trí, mà còn là cách chăm sóc bản thân.",
       "Đội ngũ của chúng tôi đến từ Đài Loan và Việt Nam, kết hợp nét vẽ tinh tế kiểu Nhật với phong cách lộng lẫy đang thịnh hành tại Việt Nam để tạo nên những thiết kế độc đáo.",
       "Từ khử trùng dụng cụ, chọn sản phẩm đến quy trình phục vụ, chúng tôi chăm chút từng chi tiết để bạn yên tâm và thư giãn.",
     ],
@@ -152,8 +152,7 @@ const vi: Dictionary = {
     title: "Liên hệ",
     lead: "Đặt lịch hoặc hỏi đáp qua Zalo, LINE hay điện thoại — chúng tôi sẽ phản hồi sớm nhất.",
     addressLabel: "Địa chỉ",
-    address: "Lầu 2, số 100, đoạn 4 đường Trung Hiếu Đông, quận Đại An, Đài Bắc",
-    transit: "Ga MRT Zhongxiao Fuxing, lối ra số 4, đi bộ khoảng 3 phút",
+    address: "Số 25, đường Trung Hiếu, quận Tam Hiệp, Tân Bắc (新北市三峽區忠孝街25號)",
     phoneLabel: "Điện thoại",
     emailLabel: "Email",
     hoursLabel: "Giờ mở cửa",
