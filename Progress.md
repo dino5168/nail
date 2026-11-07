@@ -1,14 +1,30 @@
 # Progress — 美甲網站
 
 > 計畫：`Plans/1-網站建構實作.md`　｜　規範：`CLAUDE.md`
+> 需求單：`Plans/N-*.md`，執行後輸出 `Plans/N-*實作.md`
 
-## 目前狀態
+## 目前狀態（2026-11-07 暫停）
 
+- 線上網址：https://dino5168.github.io/nail/ 　最新 commit：`c3048e9`（CI & Deploy ✅）
 - 階段 1（骨架與 CI）：✅ 完成
 - 階段 2（頁面內容）：✅ 完成（示範文案＋佔位圖）
-- 階段 3-A（動畫、SEO、圖示、效能）：✅ 完成
-- 店名與地址（Plans/2）：✅ 嬌仙美甲 Kieu Tien Nail、新北市三峽區忠孝街 25 號
+- 階段 3-A（動畫、SEO、圖示、效能）：✅ 完成，Lighthouse 手機 96～97／100／100／100
+- Plans/2 店名與地址：✅ 嬌仙美甲 Kieu Tien Nail、新北市三峽區忠孝街 25 號
+- Plans/3 手機漢堡選單：✅ 已修正並在線上驗證
 - 階段 3-B（其餘真實資料與照片）：⏳ 等待使用者提供
+
+### 下次從這裡開始
+
+1. 確認使用者是否已提供下方「待辦」中的資料。拿到後依 `Plans/1-網站建構實作.md` 的 3-B 項目替換：
+   - 店家設定 `website/src/config/site.ts`
+   - 兩語系字典 `website/src/i18n/dictionaries/zh-tw.ts`、`vi.ts`
+   - 服務價目 `website/src/data/services.ts`
+   - 作品集 `website/src/data/gallery.ts`，照片放 `website/public/images/`
+2. 仍是示範值、上線前必須替換：電話 `02-1234-5678`、Email、LINE／Zalo 帳號、Instagram／Facebook 連結、營業時間、價目、團隊成員（Mia／Linh／Yuki）、創立年份與品牌故事、FAQ 內容。
+3. 驗證工具：
+   - 手機漢堡選單：`node website/scripts/menu-test.mjs <網址> <輸出.png>`（無頭 Edge + CDP，模擬 390×844 視窗點擊並截圖）
+   - 效能：`npx lighthouse@12`，需設定 `CHROME_PATH` 指向 Edge
+   - Chrome 擴充截不到 localhost，改用無頭 Edge 截圖
 
 ## 紀錄
 
