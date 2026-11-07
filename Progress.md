@@ -13,6 +13,7 @@
 - Plans/3 手機漢堡選單：✅ 已修正並在線上驗證
 - Plans/4 首頁 Hero 照片：✅ 換成 `home01.png`（WebP 23 KB）
 - Plans/5 作品精選照片：✅ g01～g04 改用 Pexels 圖庫照片（仍標示「示意圖」）
+- Plans/6 作品集照片：✅ g05～g12 也改用 Pexels 照片，作品集 12 項全部是照片
 - 階段 3-B（其餘真實資料與照片）：⏳ 等待使用者提供
 
 ### 下次從這裡開始
@@ -29,6 +30,10 @@
    - Chrome 擴充截不到 localhost，改用無頭 Edge 截圖
 
 ## 紀錄
+
+### 2026-11-08
+**完成**
+- Plans/6：作品集 g05～g12 換成 Pexels 圖庫照片（8 張 WebP 640×640），紀錄見 `Plans/6-作品集實作.md`。
 
 ### 2026-11-07
 **討論決議**：暫定品牌「花漾美甲 Bloom Nail Studio」、多頁結構、GitHub Actions 部署到 GitHub Pages、先用佔位圖。
