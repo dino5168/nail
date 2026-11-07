@@ -36,6 +36,10 @@
 - Lighthouse（線上、手機）：zh-tw 96／100／100／100，vi 97／100／100／100。
 - 發現：Windows 本機建置時 Next 16.4 的 `__PAGE__` 預取檔路徑有 bug；CI 在 Linux 建置正常（線上確認 200）。
 
+**事故：全站 404**
+- 原因：Pages Source 實際為「Deploy from a branch」，GitHub 內建的 `pages build and deployment` 與我們的 CI 同時部署；`68b6efc` 時內建部署較晚完成，把網站蓋成 repo 原始檔。
+- 處理：使用者將 Source 改為 GitHub Actions，重新部署並確認；`CLAUDE.md` 已加入檢查方式。
+
 **待辦／下一步**
 - [x] 使用者到 GitHub repo → Settings → Pages → Source 選「GitHub Actions」（只需一次）
 - [ ] 提供真實店名、地址、電話、營業時間、價目、LINE/Zalo 連結

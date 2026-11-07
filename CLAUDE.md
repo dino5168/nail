@@ -61,6 +61,7 @@ $env:NEXT_PUBLIC_BASE_PATH="/nail"; npm run build   # 模擬 CI 的正式建置�
 
 1. **滾動式計劃**：開始新階段前先更新 `Plans/1-網站建構實作.md`，近期細、遠期粗。
 2. 修改完成後在本機執行 `npm run lint`、`npm run typecheck`、`npm run build`，全部通過才 commit。
-3. **CI 執行完同步 git**：檢查通過 → commit → push 到 `main` → GitHub Actions（lint／typecheck／build／deploy Pages）。用 `gh run watch` 或 Actions 頁面確認 CI 成功；失敗就修正後再 push。
-4. 每次工作結束更新 `Progress.md`（日期、完成事項、下一步）。
-5. 文件與回覆一律使用繁體中文；檔案為 UTF-8。
+3. **GitHub Pages 的 Source 必須是「GitHub Actions」**（Settings → Pages）。若設成「Deploy from a branch」，GitHub 內建的 `pages build and deployment` 會和我們的 workflow 同時部署，較晚完成的會覆蓋網站，可能變成全站 404。檢查方式：Actions 列表中每次 push 只應出現「CI & Deploy」，不應出現 `pages build and deployment`。
+4. **CI 執行完同步 git**：檢查通過 → commit → push 到 `main` → GitHub Actions（lint／typecheck／build／deploy Pages）。用 `gh run watch` 或 Actions 頁面確認 CI 成功；失敗就修正後再 push。
+5. 每次工作結束更新 `Progress.md`（日期、完成事項、下一步）。
+6. 文件與回覆一律使用繁體中文；檔案為 UTF-8。
