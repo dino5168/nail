@@ -9,6 +9,20 @@ export const site = {
   instagramUrl: "https://www.instagram.com/",
   facebookUrl: "https://www.facebook.com/",
   mapUrl: "https://maps.google.com/?q=台北市大安區忠孝東路四段100號",
+  /** 結構化資料（JSON-LD）用的地址與營業時間；與畫面上的文字（字典 contact.*）要同步修改 */
+  address: {
+    streetAddress: "忠孝東路四段100號2樓",
+    addressLocality: "大安區",
+    addressRegion: "台北市",
+    postalCode: "106",
+    addressCountry: "TW",
+  },
+  geo: { latitude: 25.0416, longitude: 121.5438 },
+  openingHours: [
+    { days: ["Tuesday", "Wednesday", "Thursday", "Friday"], opens: "11:00", closes: "21:00" },
+    { days: ["Saturday", "Sunday"], opens: "10:00", closes: "19:00" },
+  ],
+  priceRange: "NT$300–2,000",
 } as const;
 
 /** 在路徑前加上 basePath（給 <img src>、CSS 背景等不會自動處理 basePath 的地方用） */

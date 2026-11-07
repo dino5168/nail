@@ -30,11 +30,11 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
       <PageHero title={a.title} lead={a.lead} />
 
       <section className="container-page grid gap-12 py-20 md:grid-cols-[1fr_1.2fr] md:py-28">
-        <div className="relative">
+        <div data-reveal className="relative">
           <NailTile id="about" colors={["#8e2a6e", "#f6c9dc"]} shape="almond" variant={1} className="w-full" />
           <div className="absolute -bottom-4 -right-4 -z-10 h-full w-full border border-blush-400" />
         </div>
-        <div>
+        <div data-reveal="1">
           <h2 className="heading-display text-3xl md:text-4xl">{a.storyTitle}</h2>
           <div className="mt-8 space-y-5 leading-relaxed text-ink/85">
             {a.story.map((p) => (
@@ -49,7 +49,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
           <SectionHeading title={a.valuesTitle} />
           <ul className="grid gap-6 md:grid-cols-3">
             {a.values.map((v, i) => (
-              <li key={v.title} className="border-t-2 border-blush-400 pt-6">
+              <li key={v.title} data-reveal={String(i + 1)} className="border-t-2 border-blush-400 pt-6">
                 <span className="font-display text-4xl text-blush-400">0{i + 1}</span>
                 <h3 className="heading-display mt-3 text-xl">{v.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted">{v.text}</p>
@@ -63,7 +63,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
         <SectionHeading title={a.teamTitle} />
         <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {a.team.map((m, i) => (
-            <li key={m.name} className="bg-blush-50 p-6">
+            <li key={m.name} data-reveal={String(i + 1)} className="bg-blush-50 p-6">
               <div className="mx-auto h-36 w-36 overflow-hidden rounded-full border-4 border-white shadow-card">
                 <NailTile id={`team-${i}`} colors={avatarColors[i % avatarColors.length]} shape="round" variant={i} className="h-full w-full" />
               </div>

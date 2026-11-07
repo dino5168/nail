@@ -30,7 +30,7 @@ export function SectionHeading({
   action?: React.ReactNode;
 }) {
   return (
-    <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+    <div data-reveal className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
       <div>
         <h2 className="heading-display text-3xl md:text-[2.6rem]">{title}</h2>
         {subtitle && <p className="mt-3 max-w-xl text-muted">{subtitle}</p>}
@@ -47,7 +47,7 @@ export function WhyChooseUs({ why }: { why: Dictionary["home"]["why"] }) {
   return (
     <section className="container-page py-20 md:py-28">
       <SectionHeading title={why.title} />
-      <ul className="grid gap-px border border-blush-200 bg-blush-200 sm:grid-cols-2 lg:grid-cols-4">
+      <ul data-reveal="1" className="grid gap-px border border-blush-200 bg-blush-200 sm:grid-cols-2 lg:grid-cols-4">
         {why.items.map((item, i) => {
           const Icon = whyIcons[i % whyIcons.length];
           return (
@@ -69,7 +69,7 @@ export function WhyChooseUs({ why }: { why: Dictionary["home"]["why"] }) {
 /** 服務列表（名稱、說明、時間、價格） */
 export function ServiceRows({ items, dict }: { items: Service[]; dict: Dictionary }) {
   return (
-    <ul className="divide-y divide-blush-200 border-y border-blush-200">
+    <ul data-reveal="1" className="divide-y divide-blush-200 border-y border-blush-200">
       {items.map((s) => {
         const text = dict.services.items[s.id];
         return (
@@ -95,7 +95,7 @@ export function CtaBanner({ locale, dict }: { locale: Locale; dict: Dictionary }
   const cta = dict.home.cta;
   return (
     <section className="container-page pb-20 md:pb-28">
-      <div className="relative overflow-hidden bg-blush-400 px-8 py-14 text-center md:px-16 md:py-20">
+      <div data-reveal className="relative overflow-hidden bg-blush-400 px-8 py-14 text-center md:px-16 md:py-20">
         <LeafDecor className="absolute -left-6 -top-6 h-40 w-40 text-white/25" />
         <LeafDecor className="absolute -bottom-8 -right-6 h-48 w-48 rotate-180 text-white/25" />
         <h2 className="heading-display relative text-3xl md:text-5xl">{cta.title}</h2>

@@ -68,7 +68,7 @@ export function Header({
   return (
     <header className="sticky top-0 z-40 border-b border-blush-200 bg-white/95 backdrop-blur">
       <div className="container-page flex h-[72px] items-center justify-between gap-4">
-        <Link href={href(locale)} onClick={() => setOpen(false)} aria-label={brand.name}>
+        <Link href={href(locale)} onClick={() => setOpen(false)}>
           <Logo brand={brand} />
         </Link>
 

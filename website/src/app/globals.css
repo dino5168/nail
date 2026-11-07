@@ -14,7 +14,8 @@
   --color-muted: #6b5a62;
 
   --font-display: var(--font-cormorant), var(--font-noto-serif-tc), "Noto Serif TC", "PMingLiU", serif;
-  --font-sans: var(--font-be-vietnam), var(--font-noto-sans-tc), "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+  /* 中文內文使用系統字型，免下載 */
+  --font-sans: var(--font-be-vietnam), "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", "Noto Sans CJK TC", system-ui, sans-serif;
 
   --shadow-card: 0 24px 48px -20px rgb(233 129 159 / 0.45);
 }
@@ -104,6 +105,37 @@
 
   .btn-outline:hover {
     background: var(--color-blush-100);
+  }
+
+  /* 捲動淡入（RevealObserver 執行後才生效）。data-reveal="2" 等數字代表延遲順序 */
+  .reveal-ready [data-reveal] {
+    transition:
+      opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal-ready [data-reveal]:not(.is-visible) {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  .reveal-ready [data-reveal="1"] { transition-delay: 0.08s; }
+  .reveal-ready [data-reveal="2"] { transition-delay: 0.16s; }
+  .reveal-ready [data-reveal="3"] { transition-delay: 0.24s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal-ready [data-reveal] {
+      transition: none;
+    }
+
+    .reveal-ready [data-reveal]:not(.is-visible) {
+      opacity: 1;
+      transform: none;
+    }
+
+    html {
+      scroll-behavior: auto;
+    }
   }
 
   /* 粉色柔光背景點綴 */

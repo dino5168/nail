@@ -38,7 +38,7 @@ export default async function ServicesPage({ params }: PageProps<"/[lang]/servic
 
       <div className="container-page space-y-20 py-20">
         {serviceCategories.map((c) => (
-          <section key={c} id={c} className="scroll-mt-36 grid gap-8 md:grid-cols-[1fr_2fr]">
+          <section key={c} id={c} data-reveal className="scroll-mt-36 grid gap-8 md:grid-cols-[1fr_2fr]">
             <div>
               <h2 className="heading-display text-3xl">{s.categories[c].name}</h2>
               <p className="mt-3 text-muted">{s.categories[c].desc}</p>

@@ -38,6 +38,13 @@ web-nail/                    ← git repo 根目錄
   - 語系切換使用 `<a>` 整頁載入（確保 `<html lang>` 更新）。
 - `[lang]/layout.tsx` 設定 `dynamicParams = false` 與 `generateStaticParams`，新增頁面時沿用相同的 `hasLocale` + `notFound()` 寫法。
 - 圖片目前是 SVG 佔位圖（`components/illustrations.tsx`）。真實照片放 `website/public/images/`，並在 `data/gallery.ts` 的 `image` 欄位填入路徑。
+- **字型**：
+  - 拉丁／越南文：Cormorant Garamond（標題）＋ Be Vietnam Pro（內文），由 `next/font/google` 載入。
+  - 中文標題：`scripts/subset-font.mjs` 在 `predev`／`prebuild` 自動掃描 `src/` 的中文字，產生只含這些字的 Noto Serif TC 子集（`src/fonts/`，約 130 KB，**需 commit**）。修改中文文案後跑一次 dev 或 build，再把更新後的字型一起 commit。
+  - 中文內文使用系統字型（不下載）。**不要**改回 `next/font/google` 的 Noto TC，會產生 400 KB 以上會擋住渲染的 CSS。
+- **捲動淡入**：元素加上 `data-reveal`（可帶 `"1"`～`"3"` 表示延遲），由 `RevealObserver` 處理。有 hover 位移效果的元素，請把 `data-reveal` 加在外層。
+- **SEO**：`app/sitemap.ts`、`[lang]/og.png/route.tsx`（分享圖，建置時用 Google Fonts 子集字型產生）、`components/JsonLd.tsx`（schema.org NailSalon，資料來自 `config/site.ts`）、`lib/metadata.ts` 的 `pageMetadata()`（canonical、hreflang、OG、Twitter）。
+- 已知問題：在 **Windows** 本機建置時，Next 16.4 會把 `__PAGE__` 預取檔輸出成子目錄（路徑分隔符的 bug），本機靜態測試會看到幾個 404。CI 在 Linux 建置，不受影響。
 
 ## 常用指令（PowerShell，在 `website/` 下）
 

@@ -10,8 +10,9 @@ export function ChatButton({ chat }: { chat: Dictionary["chat"] }) {
       href={isLine ? site.lineUrl : site.zaloUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className={`fixed bottom-5 right-5 z-30 flex items-center gap-2 rounded-full px-4 py-3 text-sm font-medium text-white shadow-lg transition-transform hover:-translate-y-0.5 ${
-        isLine ? "bg-[#06c755]" : "bg-[#0068ff]"
+      // LINE 綠底配白字對比不足（2.25:1），改用深色字；Zalo 藍底白字為 4.9:1
+      className={`fixed bottom-5 right-5 z-30 flex items-center gap-2 rounded-full px-4 py-3 text-sm font-medium shadow-lg transition-transform hover:-translate-y-0.5 ${
+        isLine ? "bg-[#06c755] text-ink" : "bg-[#0068ff] text-white"
       }`}
     >
       <ChatIcon className="h-5 w-5" />

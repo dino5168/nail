@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "typecheck": "next typegen && tsc --noEmit"
+    "typecheck": "next typegen && tsc --noEmit",
+    "predev": "node scripts/subset-font.mjs",
+    "prebuild": "node scripts/subset-font.mjs"
   },
   "dependencies": {
     "next": "16.4.5",

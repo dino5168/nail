@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import { ChatButton } from "@/components/ChatButton";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { JsonLd } from "@/components/JsonLd";
+import { RevealObserver } from "@/components/RevealObserver";
 import { hasLocale, htmlLang, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { fontVariables } from "@/lib/fonts";
@@ -34,6 +36,8 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
         </main>
         <Footer locale={lang} dict={dict} />
         <ChatButton chat={dict.chat} />
+        <RevealObserver />
+        <JsonLd locale={lang} dict={dict} />
       </body>
     </html>
   );

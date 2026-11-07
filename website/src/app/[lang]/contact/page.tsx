@@ -21,8 +21,8 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
   const c = dict.contact;
 
   // 越南語版把 Zalo 放在前面
-  const lineBtn = { label: c.lineButton, url: site.lineUrl, color: "bg-[#06c755]" };
-  const zaloBtn = { label: c.zaloButton, url: site.zaloUrl, color: "bg-[#0068ff]" };
+  const lineBtn = { label: c.lineButton, url: site.lineUrl, color: "bg-[#06c755] text-ink" };
+  const zaloBtn = { label: c.zaloButton, url: site.zaloUrl, color: "bg-[#0068ff] text-white" };
   const chatButtons = lang === "vi" ? [zaloBtn, lineBtn] : [lineBtn, zaloBtn];
 
   return (
@@ -31,7 +31,7 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
 
       <section className="container-page grid gap-12 py-20 md:grid-cols-2 md:py-28">
         {/* 店家資訊 */}
-        <div className="space-y-9">
+        <div data-reveal className="space-y-9">
           <div className="flex gap-4">
             <PinIcon className="mt-1 h-6 w-6 shrink-0 text-blush-500" />
             <div>
@@ -75,13 +75,13 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
         </div>
 
         {/* 預約方式 */}
-        <div className="bg-white p-8 shadow-card md:p-10">
+        <div data-reveal="1" className="bg-white p-8 shadow-card md:p-10">
           <h2 className="heading-display text-3xl">{c.bookingTitle}</h2>
           <p className="mt-4 leading-relaxed text-muted">{c.bookingText}</p>
           <div className="mt-8 grid gap-3">
             {chatButtons.map((b) => (
               <a key={b.label} href={b.url} target="_blank" rel="noopener noreferrer"
-                className={`flex items-center justify-center gap-2 py-4 text-sm font-semibold text-white transition-opacity hover:opacity-90 ${b.color}`}>
+                className={`flex items-center justify-center gap-2 py-4 text-sm font-semibold transition-opacity hover:opacity-90 ${b.color}`}>
                 <ChatIcon className="h-5 w-5" />
                 {b.label}
               </a>

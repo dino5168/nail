@@ -55,8 +55,8 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
       <section className="relative overflow-hidden">
         <LeafDecor className="absolute -right-10 bottom-0 h-72 w-72 text-white/70" />
         <div className="container-page relative py-16 md:py-24">
-          <p className="text-sm text-muted">{intro.eyebrow}</p>
-          <p className="heading-display mt-5 max-w-4xl text-2xl leading-snug md:text-[2.4rem]">
+          <p data-reveal className="text-sm text-muted">{intro.eyebrow}</p>
+          <p data-reveal="1" className="heading-display mt-5 max-w-4xl text-2xl leading-snug md:text-[2.4rem]">
             {intro.strong}
             <span className="text-ink/30">{intro.faded}</span>
           </p>
@@ -97,7 +97,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
             </Link>
           }
         />
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-5">
+        <div data-reveal="1" className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-5">
           {gallery.slice(0, 4).map((item, i) => (
             <GalleryTile
               key={item.id}

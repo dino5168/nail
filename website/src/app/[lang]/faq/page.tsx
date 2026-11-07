@@ -23,7 +23,7 @@ export default async function FaqPage({ params }: PageProps<"/[lang]/faq">) {
     <>
       <PageHero title={f.title} lead={f.lead} />
       <section className="container-page max-w-3xl py-16 md:py-24">
-        <div className="divide-y divide-blush-200 border-y border-blush-200">
+        <div data-reveal className="divide-y divide-blush-200 border-y border-blush-200">
           {f.items.map((item, i) => (
             <details key={item.q} className="group py-2" open={i === 0}>
               <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-4 text-lg [&::-webkit-details-marker]:hidden">
@@ -38,7 +38,7 @@ export default async function FaqPage({ params }: PageProps<"/[lang]/faq">) {
           ))}
         </div>
 
-        <div className="mt-16 bg-white p-8 text-center shadow-card">
+        <div data-reveal className="mt-16 bg-white p-8 text-center shadow-card">
           <h2 className="heading-display text-2xl">{f.moreTitle}</h2>
           <p className="mt-3 text-muted">{f.moreText}</p>
           <Link href={href(lang, "contact")} className="btn-primary mt-6">
