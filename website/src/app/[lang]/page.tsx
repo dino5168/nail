@@ -29,7 +29,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="glow -left-40 top-1/3 h-96 w-96" />
-        <div className="container-page grid items-center gap-6 lg:grid-cols-[1.05fr_1fr]">
+        <div className="container-page relative grid items-center gap-6 lg:grid-cols-[1.05fr_1fr]">
           <div className="order-2 pb-16 lg:order-1 lg:py-28">
             <h1 className="heading-display text-[2.4rem] leading-[1.08] sm:text-5xl lg:text-[3.6rem]">
               {hero.titleLines.map((line) => (

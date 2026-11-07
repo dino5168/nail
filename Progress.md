@@ -23,8 +23,11 @@
 
 - 已推送到 `main`（commit `2471bf5`）。CI run 42318298935：build job（lint／typecheck／build）✅；deploy job ❌，原因是 repo 尚未啟用 GitHub Pages。
 
+- 使用者已將 Pages Source 設為 GitHub Actions；CI run 42319628526 全部成功，網站上線：https://dino5168.github.io/nail/（各頁 200、未知路徑 404）。
+- 修正首頁 Hero 粉色光暈蓋住標題文字的問題。
+
 **待辦／下一步**
-- [ ] 使用者到 GitHub repo → Settings → Pages → Source 選「GitHub Actions」（只需一次）
+- [x] 使用者到 GitHub repo → Settings → Pages → Source 選「GitHub Actions」（只需一次）
 - [ ] 提供真實店名、地址、電話、營業時間、價目、LINE/Zalo 連結
 - [ ] 提供店內與作品照片，替換佔位圖
 - [ ] 階段 3：捲動淡入動畫、sitemap／OG 圖、Lighthouse 檢查

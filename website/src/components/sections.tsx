@@ -10,6 +10,7 @@ export function PageHero({ title, lead }: { title: string; lead: string }) {
   return (
     <section className="relative overflow-hidden border-b border-blush-200 bg-blush-50">
       <div className="glow -left-24 -top-24 h-72 w-72" />
+      {/* 下方容器有 relative，文字會疊在光暈之上 */}
       <LeafDecor className="absolute -bottom-6 right-4 h-44 w-44 text-blush-200 md:right-24" />
       <div className="container-page relative py-16 md:py-24">
         <h1 className="heading-display text-4xl md:text-6xl">{title}</h1>
