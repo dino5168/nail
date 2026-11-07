@@ -5,7 +5,7 @@
 
 ## 目前狀態（2026-11-07 暫停）
 
-- 線上網址：https://dino5168.github.io/nail/ 　最新 commit：`c3048e9`（CI & Deploy ✅）
+- 線上網址：https://dino5168.github.io/nail/ 　最新 commit：`fe2591a`（CI & Deploy ✅）
 - 階段 1（骨架與 CI）：✅ 完成
 - 階段 2（頁面內容）：✅ 完成（示範文案＋佔位圖）
 - 階段 3-A（動畫、SEO、圖示、效能）：✅ 完成，Lighthouse 手機 96～97／100／100／100
@@ -70,6 +70,7 @@
 - 首頁 Hero 的 SVG 插畫換成真實照片：`home01.png`（259 KB）轉成 WebP 存為 `public/images/home-hero.webp`（23 KB）。
 - 設定寬高、`fetchPriority="high"`、雙語替代文字；最大寬度 417px，避免放大糊掉。刪除不再使用的 `HeroNails`。
 - 本機桌機與 390px 手機截圖確認版面正常。
+- commit `fe2591a`，CI run 42361058059 ✅；線上 `/nail/images/home-hero.webp` 回傳 200 `image/webp`，兩語系首頁都已改用新照片。
 
 **待辦／下一步**
 - [x] 使用者到 GitHub repo → Settings → Pages → Source 選「GitHub Actions」（只需一次）
