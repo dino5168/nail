@@ -38,3 +38,5 @@ Bing Webmaster Tools 需要登入（Microsoft、Google 或 Facebook 帳號）。
 **結果**：使用者已在自己的瀏覽器登入 Bing Webmaster Tools 並新增網站（Claude 操作的 Chrome 分頁未登入，無法看到主控台）。若之後 Bing 要求驗證，用 meta 標記（`msvalidate.01`）或 `BingSiteAuth.xml`，再把驗證檔加入本節的「不可刪除」清單。
 
 **驗證**：使用者選 XML 檔驗證，Bing 讀取 `https://dino5168.github.io/nail/BingSiteAuth.xml`。檔案放在 `website/public/BingSiteAuth.xml`（使用者帳號專屬驗證碼），部署後由使用者在 Bing 按 Verify，再提交 `sitemap.xml`。**此檔案不可刪除。**
+
+**XML 驗證失敗的備案**：使用者回報 Bing 顯示「無法存取 XML 檔案」，但以 bingbot User-Agent 實測回傳 200 application/xml、內容正確（推測 Bing 快取了部署前的 404）。另在 `app/(root)/layout.tsx` 的 metadata 加上 `<meta name="msvalidate.01">`（同一組驗證碼），輸出在 `/nail/` 的 `<head>`，可改用「HTML Meta 標記」方式驗證。**此 meta 不可刪除。**
