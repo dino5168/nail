@@ -23,7 +23,6 @@ const zhTw = {
   },
   chat: {
     label: "LINE 線上諮詢",
-    channel: "line" as "line" | "zalo",
   },
   common: {
     viewServices: "查看服務",
@@ -164,7 +163,6 @@ const zhTw = {
     bookingTitle: "預約方式",
     bookingText: "本店採預約制。請告知希望的日期、時段與服務項目，若有參考圖片也歡迎一併提供。",
     lineButton: "LINE 預約",
-    zaloButton: "Zalo 預約",
     callButton: "電話預約",
     mapButton: "在 Google 地圖開啟",
     followTitle: "追蹤我們",

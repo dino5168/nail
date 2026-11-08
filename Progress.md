@@ -15,6 +15,7 @@
 - Plans/5 作品精選照片：✅ g01～g04 改用 Pexels 圖庫照片（仍標示「示意圖」）
 - Plans/6 作品集照片：✅ g05～g12 也改用 Pexels 照片，作品集 12 項全部是照片
 - Plans/7 關於我們：✅ 創辦人改為 Kieu Tien、故事照片改用 Pexels、團隊改用人物圖示
+- Plans/8 LINE 網址：✅ 全站改用 https://lin.ee/9d0xj2B，移除 Zalo（越南語版也用 LINE）
 - 階段 3-B（其餘真實資料與照片）：⏳ 等待使用者提供
 
 ### 下次從這裡開始
@@ -24,7 +25,7 @@
    - 兩語系字典 `website/src/i18n/dictionaries/zh-tw.ts`、`vi.ts`
    - 服務價目 `website/src/data/services.ts`
    - 作品集 `website/src/data/gallery.ts`，照片放 `website/public/images/`（做法參考 `Plans/4-換首頁照片實作.md`：sharp 轉 WebP、`asset()`）
-2. 仍是示範值、上線前必須替換：電話 `02-1234-5678`、Email、LINE／Zalo 帳號、Instagram／Facebook 連結、營業時間、價目、團隊成員（Linh／Yuki；創辦人已改為 Kieu Tien）、創立年份與品牌故事、FAQ 內容。
+2. 仍是示範值、上線前必須替換：電話 `02-1234-5678`、Email、Instagram／Facebook 連結、營業時間、價目、團隊成員（Linh／Yuki；創辦人已改為 Kieu Tien）、創立年份與品牌故事、FAQ 內容。
 3. 驗證工具：
    - 手機漢堡選單：`node website/scripts/menu-test.mjs <網址> <輸出.png>`（無頭 Edge + CDP，模擬 390×844 視窗點擊並截圖）
    - 效能：`npx lighthouse@12`，需設定 `CHROME_PATH` 指向 Edge
@@ -34,6 +35,7 @@
 
 ### 2026-11-08
 **完成**
+- Plans/8：LINE 連結改為官方帳號短網址 `https://lin.ee/9d0xj2B`，全站移除 Zalo，紀錄見 `Plans/8-Line網址實作.md`。
 - Plans/7：關於我們創辦人 Mia → Kieu Tien（越南文 Kiều Tiên）、故事照片改用 Pexels 7755182、團隊頭像改用人物圖示，紀錄見 `Plans/7-修改關於我們實作.md`。
 - Plans/6：作品集 g05～g12 換成 Pexels 圖庫照片（8 張 WebP 640×640），紀錄見 `Plans/6-作品集實作.md`。
 

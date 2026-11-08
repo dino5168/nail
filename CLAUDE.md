@@ -20,7 +20,7 @@ web-nail/                    ← git repo 根目錄
       ├─ app/[lang]/         ← 各語系頁面（首頁、about、services、gallery、contact、faq）
       ├─ app/global-not-found.tsx
       ├─ components/         ← Header、Footer、ChatButton、sections、GalleryGrid、icons、illustrations
-      ├─ config/site.ts      ← 店家電話、LINE/Zalo、社群連結、asset() 工具
+      ├─ config/site.ts      ← 店家電話、LINE（兩語系共用）、社群連結、asset() 工具
       ├─ data/               ← services.ts（價目）、gallery.ts（作品集）
       ├─ i18n/               ← config.ts（語系清單、href()）、dictionaries/zh-tw.ts、vi.ts
       └─ lib/                ← fonts.ts、metadata.ts

@@ -4,8 +4,8 @@ export const site = {
   phone: "02-1234-5678",
   phoneHref: "tel:+886212345678",
   email: "hello@kieutiennail.example",
-  lineUrl: "https://line.me/R/ti/p/@kieutiennail",
-  zaloUrl: "https://zalo.me/0000000000",
+  /** LINE 官方帳號（QR Code 連結）；中文與越南語版都使用 LINE */
+  lineUrl: "https://lin.ee/9d0xj2B",
   instagramUrl: "https://www.instagram.com/",
   facebookUrl: "https://www.facebook.com/",
   mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("新北市三峽區忠孝街25號")}`,

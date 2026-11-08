@@ -20,11 +20,6 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
   const dict = await getDictionary(lang);
   const c = dict.contact;
 
-  // 越南語版把 Zalo 放在前面
-  const lineBtn = { label: c.lineButton, url: site.lineUrl, color: "bg-[#06c755] text-ink" };
-  const zaloBtn = { label: c.zaloButton, url: site.zaloUrl, color: "bg-[#0068ff] text-white" };
-  const chatButtons = lang === "vi" ? [zaloBtn, lineBtn] : [lineBtn, zaloBtn];
-
   return (
     <>
       <PageHero title={c.title} lead={c.lead} />
@@ -78,13 +73,11 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
           <h2 className="heading-display text-3xl">{c.bookingTitle}</h2>
           <p className="mt-4 leading-relaxed text-muted">{c.bookingText}</p>
           <div className="mt-8 grid gap-3">
-            {chatButtons.map((b) => (
-              <a key={b.label} href={b.url} target="_blank" rel="noopener noreferrer"
-                className={`flex items-center justify-center gap-2 py-4 text-sm font-semibold transition-opacity hover:opacity-90 ${b.color}`}>
-                <ChatIcon className="h-5 w-5" />
-                {b.label}
-              </a>
-            ))}
+            <a href={site.lineUrl} target="_blank" rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 bg-[#06c755] py-4 text-sm font-semibold text-ink transition-opacity hover:opacity-90">
+              <ChatIcon className="h-5 w-5" />
+              {c.lineButton}
+            </a>
             <a href={site.phoneHref} className="btn-primary py-4">
               <PhoneIcon className="h-5 w-5" />
               {c.callButton}

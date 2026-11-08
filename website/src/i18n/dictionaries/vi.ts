@@ -24,8 +24,7 @@ const vi: Dictionary = {
     language: "Ngôn ngữ",
   },
   chat: {
-    label: "Chat với chúng tôi qua Zalo",
-    channel: "zalo",
+    label: "Chat với chúng tôi qua LINE",
   },
   common: {
     viewServices: "Xem dịch vụ",
@@ -80,7 +79,7 @@ const vi: Dictionary = {
     },
     cta: {
       title: "Sẵn sàng làm đẹp đôi tay?",
-      text: "Tiệm làm việc theo lịch hẹn. Hãy đặt lịch qua Zalo, LINE hoặc điện thoại để giữ chỗ.",
+      text: "Tiệm làm việc theo lịch hẹn. Hãy đặt lịch qua LINE hoặc điện thoại để giữ chỗ.",
       button: "Đặt lịch ngay",
     },
   },
@@ -152,7 +151,7 @@ const vi: Dictionary = {
   },
   contact: {
     title: "Liên hệ",
-    lead: "Đặt lịch hoặc hỏi đáp qua Zalo, LINE hay điện thoại — chúng tôi sẽ phản hồi sớm nhất.",
+    lead: "Đặt lịch hoặc hỏi đáp qua LINE hoặc điện thoại — chúng tôi sẽ phản hồi sớm nhất.",
     addressLabel: "Địa chỉ",
     address: "Số 25, đường Trung Hiếu, quận Tam Hiệp, Tân Bắc (新北市三峽區忠孝街25號)",
     phoneLabel: "Điện thoại",
@@ -166,7 +165,6 @@ const vi: Dictionary = {
     bookingTitle: "Cách đặt lịch",
     bookingText: "Tiệm làm việc theo lịch hẹn. Vui lòng cho biết ngày, giờ và dịch vụ mong muốn; nếu có ảnh mẫu tham khảo, hãy gửi kèm nhé.",
     lineButton: "Đặt lịch qua LINE",
-    zaloButton: "Đặt lịch qua Zalo",
     callButton: "Gọi điện đặt lịch",
     mapButton: "Mở Google Maps",
     followTitle: "Theo dõi chúng tôi",
@@ -205,7 +203,7 @@ const vi: Dictionary = {
       },
     ],
     moreTitle: "Bạn còn câu hỏi khác?",
-    moreText: "Hãy liên hệ với chúng tôi qua Zalo, LINE hoặc điện thoại.",
+    moreText: "Hãy liên hệ với chúng tôi qua LINE hoặc điện thoại.",
   },
   footer: {
     tagline: "Mỗi lần làm nail là một lần chiều chuộng bản thân.",
