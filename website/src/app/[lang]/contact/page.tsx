@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ChatIcon, ClockIcon, FacebookIcon, InstagramIcon, MailIcon, PhoneIcon, PinIcon } from "@/components/icons";
 import { PageHero } from "@/components/sections";
-import { site } from "@/config/site";
+import { asset, site } from "@/config/site";
 import { hasLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { pageMetadata } from "@/lib/metadata";
@@ -82,6 +82,21 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
               <PhoneIcon className="h-5 w-5" />
               {c.callButton}
             </a>
+          </div>
+          <div className="mt-8 flex items-center gap-5 border border-blush-200 p-4">
+            {/* QR Code 由 https://lin.ee/9d0xj2B 產生（public/images/line-qr.svg）；更換 LINE 網址時要重新產生 */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={asset("/images/line-qr.svg")}
+              alt={c.lineQrAlt}
+              width={128}
+              height={128}
+              className="h-28 w-28 shrink-0 sm:h-32 sm:w-32"
+            />
+            <div>
+              <h3 className="font-semibold">{c.lineQrTitle}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{c.lineQrText}</p>
+            </div>
           </div>
           <div className="mt-10 border-t border-blush-200 pt-6">
             <h3 className="text-xs uppercase tracking-[0.25em] text-muted">{c.followTitle}</h3>

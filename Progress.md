@@ -15,7 +15,7 @@
 - Plans/5 作品精選照片：✅ g01～g04 改用 Pexels 圖庫照片（仍標示「示意圖」）
 - Plans/6 作品集照片：✅ g05～g12 也改用 Pexels 照片，作品集 12 項全部是照片
 - Plans/7 關於我們：✅ 創辦人改為 Kieu Tien、故事照片改用 Pexels、團隊改用人物圖示
-- Plans/8 LINE 網址：✅ 全站改用 https://lin.ee/9d0xj2B，移除 Zalo（越南語版也用 LINE）
+- Plans/8 LINE 網址：✅ 全站改用 https://lin.ee/9d0xj2B，移除 Zalo（越南語版也用 LINE）；聯絡頁加上 LINE QR Code
 - 階段 3-B（其餘真實資料與照片）：⏳ 等待使用者提供
 
 ### 下次從這裡開始
@@ -36,6 +36,7 @@
 ### 2026-11-08
 **完成**
 - Plans/8：LINE 連結改為官方帳號短網址 `https://lin.ee/9d0xj2B`，全站移除 Zalo，紀錄見 `Plans/8-Line網址實作.md`。
+- 聯絡頁加上 LINE QR Code（`public/images/line-qr.svg`，更換 LINE 網址時要重新產生）。
 - Plans/7：關於我們創辦人 Mia → Kieu Tien（越南文 Kiều Tiên）、故事照片改用 Pexels 7755182、團隊頭像改用人物圖示，紀錄見 `Plans/7-修改關於我們實作.md`。
 - Plans/6：作品集 g05～g12 換成 Pexels 圖庫照片（8 張 WebP 640×640），紀錄見 `Plans/6-作品集實作.md`。
 
