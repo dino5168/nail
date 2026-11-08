@@ -34,5 +34,5 @@
 - [x] 聯絡頁「預約方式」卡片在 LINE／電話按鈕下方加上 QR Code 區塊（QR Code＋「掃描加入 LINE 好友」說明），圖片經 `asset()`。
 - [x] 字典新增 `contact.lineQrTitle`、`lineQrText`、`lineQrAlt`（中文、越南語）。
 - 注意：**更換 LINE 網址時要重新產生 `line-qr.svg`**（程式註解也有寫）。
-- `npm run lint`、`typecheck`、`build` 都通過；本機截圖確認版面正常。
+- `npm run lint`、`typecheck`、`build` 都通過；本機截圖確認版面正常。commit `df5def8` 的 CI & Deploy ✅，線上兩語系聯絡頁都有 QR Code。
 
