@@ -36,3 +36,5 @@ Bing Webmaster Tools 需要登入（Microsoft、Google 或 Facebook 帳號）。
 2. 手動新增時，用 XML 檔（`BingSiteAuth.xml`）或 meta 標記驗證，再提交 `sitemap.xml`。
 
 **結果**：使用者已在自己的瀏覽器登入 Bing Webmaster Tools 並新增網站（Claude 操作的 Chrome 分頁未登入，無法看到主控台）。若之後 Bing 要求驗證，用 meta 標記（`msvalidate.01`）或 `BingSiteAuth.xml`，再把驗證檔加入本節的「不可刪除」清單。
+
+**驗證**：使用者選 XML 檔驗證，Bing 讀取 `https://dino5168.github.io/nail/BingSiteAuth.xml`。檔案放在 `website/public/BingSiteAuth.xml`（使用者帳號專屬驗證碼），部署後由使用者在 Bing 按 Verify，再提交 `sitemap.xml`。**此檔案不可刪除。**

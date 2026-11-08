@@ -45,7 +45,7 @@ web-nail/                    ← git repo 根目錄
 - **捲動淡入**：元素加上 `data-reveal`（可帶 `"1"`～`"3"` 表示延遲），由 `RevealObserver` 處理。有 hover 位移效果的元素，請把 `data-reveal` 加在外層。
 - **GEO／SEO**（見 `Plans/9-撰寫GEO實作.md`）：店家事實的單一來源是 `lib/facts.ts`，字典裡的 `{phone}`、`{address}`、`{line}`、`{hours}`、`{priceMin}`、`{priceMax}` 會換成實際資料；新增文字要提到電話、地址等事實時請用佔位字，不要寫死。結構化資料在 `components/JsonLd.tsx`（NailSalon＋WebSite＋價目 OfferCatalog，FAQ 頁另有 FAQPage）；`app/llms.txt`、`app/llms-full.txt` 在建置時產生給 AI 讀的說明；首頁 `components/ShopFacts.tsx` 是給 AI 引用的店家資訊區塊。另有 `app/sitemap.ts`、`[lang]/og.png/route.tsx`（分享圖）、`lib/metadata.ts` 的 `pageMetadata()`（canonical、hreflang、OG、Twitter）。示範值（`.example` 信箱、社群首頁連結）不會輸出到結構化資料。
 - **header 有 `backdrop-blur`**：任何 `position: fixed` 的浮層（選單、彈窗）都**不能**放在 `<header>` 裡面，否則會以 header 為定位基準，高度變成 0（見 `Plans/3-手機實作.md`）。
-- **搜尋引擎驗證檔（不可刪除）**：`public/googlec0196776f2e548ff.html`（Google Search Console 擁有權驗證）、`public/e4cd882950e7af19595f33d4c141c709.txt`（Bing IndexNow 金鑰）。見 `Plans/10-上架GoogleSearch-Edge實作.md`。
+- **搜尋引擎驗證檔（不可刪除）**：`public/googlec0196776f2e548ff.html`（Google Search Console 擁有權驗證）、`public/e4cd882950e7af19595f33d4c141c709.txt`（Bing IndexNow 金鑰）、`public/BingSiteAuth.xml`（Bing Webmaster Tools 擁有權驗證）。見 `Plans/10-上架GoogleSearch-Edge實作.md`。
 - 已知問題：在 **Windows** 本機建置時，Next 16.4 會把 `__PAGE__` 預取檔輸出成子目錄（路徑分隔符的 bug），本機靜態測試會看到幾個 404。CI 在 Linux 建置，不受影響。
 
 ## 常用指令（PowerShell，在 `website/` 下）
