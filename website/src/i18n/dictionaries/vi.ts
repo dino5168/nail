@@ -5,7 +5,7 @@ const vi: Dictionary = {
   meta: {
     siteName: "Kiều Tiên Nail",
     description:
-      "Kiều Tiên Nail — tiệm nail cao cấp tại Tam Hiệp, Tân Bắc: sơn gel, vẽ móng nghệ thuật, nối móng, chăm sóc chân và dưỡng tay bằng sáp paraffin.",
+      "Kiều Tiên Nail ở số 25 đường Trung Hiếu, quận Tam Hiệp, Tân Bắc (Đài Loan): sơn gel, vẽ móng nghệ thuật, nối móng, làm móng chân và chăm sóc tay chân. Phục vụ bằng tiếng Việt và tiếng Trung, nhận đặt lịch qua LINE hoặc điện thoại.",
   },
   brand: {
     name: "Kiều Tiên",
@@ -177,6 +177,22 @@ const vi: Dictionary = {
     lead: "Những điều bạn muốn biết trước khi đặt lịch.",
     items: [
       {
+        q: "Kiều Tiên Nail ở đâu?",
+        a: "Tiệm ở {address}. Bạn có thể mở Google Maps ở trang Liên hệ để xem đường đi.",
+      },
+      {
+        q: "Đặt lịch như thế nào?",
+        a: "Tiệm làm việc theo lịch hẹn. Bạn có thể đặt lịch qua tài khoản LINE chính thức ({line}) hoặc gọi điện {phone}, cho biết ngày, giờ và dịch vụ mong muốn.",
+      },
+      {
+        q: "Giờ mở cửa của tiệm?",
+        a: "{hours}.",
+      },
+      {
+        q: "Giá làm nail khoảng bao nhiêu?",
+        a: "Khoảng NT${priceMin} đến NT${priceMax}, tùy dịch vụ, độ phức tạp của mẫu và tình trạng móng. Xem bảng giá đầy đủ ở trang Dịch vụ.",
+      },
+      {
         q: "Có bắt buộc đặt lịch trước không?",
         a: "Tiệm làm việc theo lịch hẹn, nên đặt trước 2–3 ngày. Nếu còn trống, chúng tôi vẫn nhận khách đến trực tiếp — hãy gọi điện hỏi trước nhé.",
       },
@@ -207,6 +223,25 @@ const vi: Dictionary = {
     ],
     moreTitle: "Bạn còn câu hỏi khác?",
     moreText: "Hãy liên hệ với chúng tôi qua LINE hoặc điện thoại.",
+  },
+  facts: {
+    title: "Thông tin tiệm",
+    summary:
+      "Kiều Tiên Nail (嬌仙美甲) là tiệm nail ở quận Tam Hiệp, thành phố Tân Bắc, Đài Loan, chuyên sơn gel, vẽ móng nghệ thuật, French và mắt mèo, nối móng gel và bột, làm móng chân và spa chân, dưỡng tay bằng sáp paraffin. Tiệm phục vụ bằng tiếng Việt và tiếng Trung, làm việc theo lịch hẹn — đặt lịch qua LINE hoặc gọi {phone}.",
+    listSep: "; ",
+    labels: {
+      address: "Địa chỉ",
+      phone: "Điện thoại",
+      line: "LINE",
+      hours: "Giờ mở cửa",
+      languages: "Ngôn ngữ",
+      price: "Khoảng giá",
+      booking: "Đặt lịch",
+    },
+    languages: "Tiếng Việt, tiếng Trung",
+    price: "NT${priceMin}–{priceMax} (tùy dịch vụ và mẫu)",
+    booking: "Theo lịch hẹn, qua LINE hoặc điện thoại",
+    lineText: "Kết bạn LINE chính thức",
   },
   footer: {
     tagline: "Mỗi lần làm nail là một lần chiều chuộng bản thân.",

@@ -17,6 +17,7 @@
 - Plans/7 關於我們：✅ 創辦人改為 Kieu Tien、故事照片改用 Pexels、團隊改用人物圖示
 - Plans/8 LINE 網址：✅ 全站改用 https://lin.ee/9d0xj2B，移除 Zalo（越南語版也用 LINE）；聯絡頁加上 LINE QR Code
 - 電話：✅ 改為 0909-001-261（`config/site.ts`）
+- Plans/9 GEO／SEO：✅ 店家事實單一來源 `lib/facts.ts`、首頁店家資訊、FAQ 新增 4 題、JSON-LD 加價目與 FAQPage、`/nail/llms.txt`
 - 階段 3-B（其餘真實資料與照片）：⏳ 等待使用者提供
 
 ### 下次從這裡開始
@@ -36,6 +37,7 @@
 
 ### 2026-11-08
 **完成**
+- Plans/9：GEO 優先的 AI 搜尋優化（首頁「店家資訊一覽」、FAQ 新增在哪裡／怎麼預約／營業時間／價格、JSON-LD 價目表與 FAQPage、llms.txt／llms-full.txt、meta description 改寫），紀錄見 `Plans/9-撰寫GEO實作.md`。
 - 店家電話改為 0909-001-261（撥號連結 `tel:+886909001261`），聯絡頁、頁尾、JSON-LD 同步。
 - Plans/8：LINE 連結改為官方帳號短網址 `https://lin.ee/9d0xj2B`，全站移除 Zalo，紀錄見 `Plans/8-Line網址實作.md`。
 - 聯絡頁加上 LINE QR Code（`public/images/line-qr.svg`，更換 LINE 網址時要重新產生）。

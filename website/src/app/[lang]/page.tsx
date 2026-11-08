@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { GalleryTile } from "@/components/GalleryGrid";
 import { ArrowIcon } from "@/components/icons";
 import { LeafDecor } from "@/components/illustrations";
+import { ShopFacts } from "@/components/ShopFacts";
 import { asset } from "@/config/site";
 import { CtaBanner, SectionHeading, ServiceRows, WhyChooseUs } from "@/components/sections";
 import { gallery } from "@/data/gallery";
@@ -119,6 +120,8 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
           ))}
         </div>
       </section>
+
+      <ShopFacts dict={dict} />
 
       <CtaBanner locale={lang} dict={dict} />
     </>

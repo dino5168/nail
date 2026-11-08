@@ -3,7 +3,7 @@ const zhTw = {
   meta: {
     siteName: "嬌仙美甲 Kieu Tien Nail",
     description:
-      "嬌仙美甲 — 位於新北市三峽的精緻美甲沙龍，提供凝膠指甲、手繪造型、延甲、足部保養與石蠟護理。",
+      "嬌仙美甲 Kieu Tien Nail 位於新北市三峽區忠孝街 25 號，提供凝膠指甲、手繪造型、延甲、足部美甲與手足保養，可用中文與越南語服務，採預約制，可透過 LINE 或電話預約。",
   },
   brand: {
     name: "嬌仙美甲",
@@ -173,7 +173,24 @@ const zhTw = {
   faq: {
     title: "常見問題",
     lead: "預約前想了解的事，都整理在這裡。",
+    // {address}、{phone}、{line}、{hours}、{priceMin}、{priceMax} 會在畫面上換成實際資料（lib/facts.ts）
     items: [
+      {
+        q: "嬌仙美甲在哪裡？",
+        a: "嬌仙美甲位於{address}，可在「聯絡我們」頁面開啟 Google 地圖查看路線。",
+      },
+      {
+        q: "要怎麼預約？",
+        a: "本店採預約制，可透過 LINE 官方帳號（{line}）或電話 {phone} 預約，請告知希望的日期、時段與服務項目。",
+      },
+      {
+        q: "營業時間是什麼時候？",
+        a: "{hours}。",
+      },
+      {
+        q: "美甲價格大約多少？",
+        a: "價格約 NT${priceMin} 至 NT${priceMax}，依項目、設計複雜度與指甲狀況而定，完整價目請見「服務項目」頁面。",
+      },
       {
         q: "一定要預約嗎？",
         a: "本店採預約制，建議提前 2–3 天預約。若當天有空檔也可接受現場客人，歡迎先來電詢問。",
@@ -205,6 +222,26 @@ const zhTw = {
     ],
     moreTitle: "還有其他問題？",
     moreText: "歡迎透過 LINE 或電話與我們聯繫。",
+  },
+  // 首頁「店家資訊一覽」與 llms.txt 用的摘要；{phone} 等佔位字會換成實際資料
+  facts: {
+    title: "店家資訊一覽",
+    summary:
+      "嬌仙美甲（Kieu Tien Nail）是位於新北市三峽區的美甲沙龍，提供凝膠指甲、手繪造型、法式與貓眼凝膠、凝膠與水晶延甲、足部美甲與 SPA、石蠟護理等服務，可使用中文與越南語溝通。本店採預約制，可透過 LINE 或電話 {phone} 預約。",
+    listSep: "；",
+    labels: {
+      address: "地址",
+      phone: "電話",
+      line: "LINE",
+      hours: "營業時間",
+      languages: "服務語言",
+      price: "價格範圍",
+      booking: "預約方式",
+    },
+    languages: "中文、越南語",
+    price: "NT${priceMin}–{priceMax}（依項目與設計而定）",
+    booking: "採預約制，可透過 LINE 或電話預約",
+    lineText: "加入 LINE 官方帳號",
   },
   footer: {
     tagline: "讓每一次美甲，都是寵愛自己的時光。",

@@ -9,6 +9,8 @@ export const site = {
   instagramUrl: "https://www.instagram.com/",
   facebookUrl: "https://www.facebook.com/",
   mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("新北市三峽區忠孝街25號")}`,
+  /** 英文地址（給 llms.txt 與英文 AI 搜尋用） */
+  addressEn: "No. 25, Zhongxiao St., Sanxia Dist., New Taipei City 237, Taiwan",
   /** 結構化資料（JSON-LD）用的地址與營業時間；與畫面上的文字（字典 contact.*）要同步修改 */
   address: {
     streetAddress: "忠孝街25號",
@@ -21,7 +23,6 @@ export const site = {
     { days: ["Tuesday", "Wednesday", "Thursday", "Friday"], opens: "11:00", closes: "21:00" },
     { days: ["Saturday", "Sunday"], opens: "10:00", closes: "19:00" },
   ],
-  priceRange: "NT$300–2,000",
 } as const;
 
 /** 在路徑前加上 basePath（給 <img src>、CSS 背景等不會自動處理 basePath 的地方用） */

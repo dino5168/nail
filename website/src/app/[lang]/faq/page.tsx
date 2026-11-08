@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { FaqJsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/sections";
 import { hasLocale, href } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
+import { fillFacts } from "@/lib/facts";
 import { pageMetadata } from "@/lib/metadata";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/faq">): Promise<Metadata> {
@@ -21,6 +23,7 @@ export default async function FaqPage({ params }: PageProps<"/[lang]/faq">) {
 
   return (
     <>
+      <FaqJsonLd dict={dict} />
       <PageHero title={f.title} lead={f.lead} />
       <section className="container-page max-w-3xl py-16 md:py-24">
         <div data-reveal className="divide-y divide-blush-200 border-y border-blush-200">
@@ -33,7 +36,7 @@ export default async function FaqPage({ params }: PageProps<"/[lang]/faq">) {
                   className="relative h-4 w-4 shrink-0 before:absolute before:left-0 before:top-1/2 before:h-px before:w-4 before:bg-plum-700 after:absolute after:left-1/2 after:top-0 after:h-4 after:w-px after:bg-plum-700 after:transition-transform group-open:after:scale-y-0"
                 />
               </summary>
-              <p className="pb-5 pr-10 leading-relaxed text-muted">{item.a}</p>
+              <p className="pb-5 pr-10 leading-relaxed text-muted">{fillFacts(item.a, dict)}</p>
             </details>
           ))}
         </div>
