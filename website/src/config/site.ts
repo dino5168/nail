@@ -1,8 +1,8 @@
 // 店家基本資料（非語系相關的部分）。換成真實資料時只需修改這個檔案。
 export const site = {
   brand: "Kieu Tien Nail",
-  phone: "02-1234-5678",
-  phoneHref: "tel:+886212345678",
+  phone: "0909-001-261",
+  phoneHref: "tel:+886909001261",
   email: "hello@kieutiennail.example",
   /** LINE 官方帳號（QR Code 連結）；中文與越南語版都使用 LINE */
   lineUrl: "https://lin.ee/9d0xj2B",
