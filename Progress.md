@@ -18,7 +18,7 @@
 - Plans/8 LINE 網址：✅ 全站改用 https://lin.ee/9d0xj2B，移除 Zalo（越南語版也用 LINE）；聯絡頁加上 LINE QR Code
 - 電話：✅ 改為 0909-001-261（`config/site.ts`）
 - Plans/9 GEO／SEO：✅ 店家事實單一來源 `lib/facts.ts`、首頁店家資訊、FAQ 新增 4 題、JSON-LD 加價目與 FAQPage、`/nail/llms.txt`
-- Plans/10 搜尋引擎上架：✅ Google Search Console 已驗證、提交 sitemap、zh-tw／vi 已要求建立索引；✅ Bing 已用 IndexNow 送出 12 個網址；✅ Bing Webmaster Tools 使用者已新增網站
+- Plans/10 搜尋引擎上架：✅ Google Search Console 已驗證、提交 sitemap、zh-tw／vi 已要求建立索引；✅ Bing 已用 IndexNow 送出 12 個網址；✅ Bing Webmaster Tools 已新增網站並驗證成功（BingSiteAuth.xml＋msvalidate.01 meta）
 - 階段 3-B（其餘真實資料與照片）：⏳ 等待使用者提供
 
 ### 下次從這裡開始
@@ -38,7 +38,7 @@
 
 ### 2026-11-08
 **完成**
-- Plans/10：Google Search Console 新增 `https://dino5168.github.io/nail/` 並以 HTML 檔驗證、提交 sitemap、要求 zh-tw／vi 建立索引；Bing 以 IndexNow 送出 12 個網址。Bing Webmaster Tools 由使用者本人登入並新增網站。紀錄見 `Plans/10-上架GoogleSearch-Edge實作.md`。
+- Plans/10：Google Search Console 新增 `https://dino5168.github.io/nail/` 並以 HTML 檔驗證、提交 sitemap、要求 zh-tw／vi 建立索引；Bing 以 IndexNow 送出 12 個網址。Bing Webmaster Tools 由使用者本人登入並新增網站，以 BingSiteAuth.xml／msvalidate.01 meta 驗證成功。紀錄見 `Plans/10-上架GoogleSearch-Edge實作.md`。
 - Plans/9：GEO 優先的 AI 搜尋優化（首頁「店家資訊一覽」、FAQ 新增在哪裡／怎麼預約／營業時間／價格、JSON-LD 價目表與 FAQPage、llms.txt／llms-full.txt、meta description 改寫），紀錄見 `Plans/9-撰寫GEO實作.md`。
 - 店家電話改為 0909-001-261（撥號連結 `tel:+886909001261`），聯絡頁、頁尾、JSON-LD 同步。
 - Plans/8：LINE 連結改為官方帳號短網址 `https://lin.ee/9d0xj2B`，全站移除 Zalo，紀錄見 `Plans/8-Line網址實作.md`。
