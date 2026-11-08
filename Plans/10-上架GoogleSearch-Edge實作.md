@@ -28,9 +28,11 @@ curl -X POST https://www.bing.com/indexnow -H "Content-Type: application/json; c
   -d '{"host":"dino5168.github.io","key":"'$KEY'","keyLocation":"https://dino5168.github.io/nail/'$KEY'.txt","urlList":["https://dino5168.github.io/nail/zh-tw/","https://dino5168.github.io/nail/vi/"]}'
 ```
 
-### Bing Webmaster Tools（⏳ 等使用者登入）
+### Bing Webmaster Tools（✅ 使用者已新增網站，2026-11-08）
 
 Bing Webmaster Tools 需要登入（Microsoft、Google 或 Facebook 帳號）。登入會建立 Webmaster 帳號並授權存取帳號，必須由使用者本人操作。登入後的步驟：
 
 1. 選「從 Google Search Console 匯入」（最快，會一併匯入已驗證的網站與 sitemap），或手動新增網站 `https://dino5168.github.io/nail/`。
 2. 手動新增時，用 XML 檔（`BingSiteAuth.xml`）或 meta 標記驗證，再提交 `sitemap.xml`。
+
+**結果**：使用者已在自己的瀏覽器登入 Bing Webmaster Tools 並新增網站（Claude 操作的 Chrome 分頁未登入，無法看到主控台）。若之後 Bing 要求驗證，用 meta 標記（`msvalidate.01`）或 `BingSiteAuth.xml`，再把驗證檔加入本節的「不可刪除」清單。
