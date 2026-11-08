@@ -45,6 +45,7 @@ AI 搜尋引用網站內容時，最需要的是：**清楚的實體（哪一家
 - `npm run lint`、`npm run typecheck`、`npm run build`（`NEXT_PUBLIC_BASE_PATH=/nail`）都通過；建置輸出包含 `llms.txt`、`llms-full.txt`。
 - 檢查建置後的 JSON-LD：NailSalon 有 19 個欄位、13 項價目、`sameAs` 只有 LINE、電話為 `+886909001261`；FAQ 頁有 FAQPage（中文 11 題）。
 - 本機用無頭 Edge（CDP）截圖：首頁「店家資訊一覽」桌機與手機（越南語 390px）版面正常；FAQ 新題目顯示正確，佔位字都已換成實際資料。
+- commit `d63d63c` 的 CI & Deploy ✅；線上 `/nail/llms.txt`、`/nail/llms-full.txt` 回應 200（text/plain; charset=utf-8），首頁有店家資訊與 OfferCatalog，FAQ 頁有 FAQPage。
 
 ## 之後（影響 GEO 最大的幾件事）
 

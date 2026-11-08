@@ -5,7 +5,7 @@
 
 ## 目前狀態（2026-11-07 暫停）
 
-- 線上網址：https://dino5168.github.io/nail/ 　最新 commit：`b821fb2`（CI & Deploy ✅）
+- 線上網址：https://dino5168.github.io/nail/ 　最新 commit：`d63d63c`（CI & Deploy ✅）
 - 階段 1（骨架與 CI）：✅ 完成
 - 階段 2（頁面內容）：✅ 完成（示範文案＋佔位圖）
 - 階段 3-A（動畫、SEO、圖示、效能）：✅ 完成，Lighthouse 手機 96～97／100／100／100
