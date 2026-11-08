@@ -24,3 +24,4 @@
 
 - `npm run lint`、`npm run typecheck`、`npm run build`（`NEXT_PUBLIC_BASE_PATH=/nail`）都通過。
 - 建置輸出全站搜尋不到 zalo；中文與越南語聯絡頁各有 2 個連到 `https://lin.ee/9d0xj2B` 的連結（浮動按鈕＋預約按鈕）。
+- commit `4e0c40c` 的 CI & Deploy ✅；線上中文與越南語聯絡頁都連到 `lin.ee/9d0xj2B`，搜尋不到 zalo。
